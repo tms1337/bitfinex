@@ -95,7 +95,7 @@ def symbols(): # get a list of valid symbol IDs.
 # authenticated
 
 def genNonce(): # generates a nonce, used for authentication.
-	return str(long(time.time() * 1000000))
+	return str(int(time.time() * 1000000))
 
 def payloadPacker(payload): # packs and signs the payload of the request.
 
