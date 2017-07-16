@@ -13,14 +13,13 @@ __all__ = ['fp', 'ticker', 'today', 'orderbook', 'lendbook', 'stats', 'trades', 
 
 URL = "https://api.bitfinex.com/v1"
 
-fp = None
+API_KEY = None
+API_SECRET = None
 
-API_KEY = fp.readline().rstrip() # put your API public key here.
-API_SECRET = fp.readline().rstrip() # put your API private key here.
-print ("Your pub: " + str(API_KEY))
-#print "Your priv: " + str(API_SECRET)
-
-# unauthenticated
+def load_keys(key_uri)
+    fp = open(key_uri)
+    API_KEY = fp.readline().rstrip() # put your API public key here.
+    API_SECRET = fp.readline().rstrip() # put your API private key here.
 
 def ticker(symbol='btcusd'): # gets the innermost bid and asks and information on the most recent trade.
 
