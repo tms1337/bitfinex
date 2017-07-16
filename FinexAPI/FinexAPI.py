@@ -18,6 +18,8 @@ API_SECRET = None
 
 def load_keys(key_uri):
     fp = open(key_uri)
+    global API_KEY
+    global API_SECRET
     API_KEY = fp.readline().rstrip() # put your API public key here.
     API_SECRET = fp.readline().rstrip() # put your API private key here.
 
