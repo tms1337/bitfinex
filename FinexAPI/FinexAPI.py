@@ -100,7 +100,7 @@ def genNonce(): # generates a nonce, used for authentication.
 def payloadPacker(payload): # packs and signs the payload of the request.
 
 	j = json.dumps(payload)
-    j = bytes(j, 'UTF-8')
+	j = bytes(j, 'UTF-8')
 	data = base64.standard_b64encode(j)
 
 	h = hmac.new(API_SECRET, data, hashlib.sha384)
