@@ -16,7 +16,7 @@ URL = "https://api.bitfinex.com/v1"
 API_KEY = None
 API_SECRET = None
 
-def load_keys(key_uri)
+def load_keys(key_uri):
     fp = open(key_uri)
     API_KEY = fp.readline().rstrip() # put your API public key here.
     API_SECRET = fp.readline().rstrip() # put your API private key here.
